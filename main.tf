@@ -98,7 +98,7 @@ resource "aws_route_table_association" "my_route" {
 resource "aws_security_group" "ec2_sg" {
    vpc_id = aws_vpc.my_vpc.id
    ingress  {
-     cidr_blocks = ["49.207.58.33/32"]
+     cidr_blocks = ["49.207.62.130/32"]
      from_port = 0
      protocol = -1
      to_port = 0
