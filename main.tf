@@ -9,7 +9,7 @@ terraform {
   }
 }
 provider "aws" {
-    region = "us-east-1"
+    region = "us-west-2"
 }
 
 resource "aws_instance" "amazon" {
@@ -62,7 +62,7 @@ resource "aws_vpc" "my_vpc" {
 resource "aws_subnet" "public_subnet" {
     vpc_id = aws_vpc.my_vpc.id
     cidr_block = "10.0.0.0/24"
-    availability_zone = "us-east-1a"
+    availability_zone = "us-west-2a"
     map_public_ip_on_launch = true
     tags = {
        Name = "public_subnet"
@@ -117,7 +117,7 @@ resource "aws_security_group" "ec2_sg" {
 resource "aws_ebs_volume" "custom" {
   size = 100
   type = "gp3"
-  availability_zone = "us-east-1a"
+  availability_zone = "us-west-2a"
 }
 
 
