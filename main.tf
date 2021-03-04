@@ -14,7 +14,7 @@ provider "aws" {
 
 resource "aws_instance" "amazon" {
     count = 1
-    ami = "ami-0915bcb5fa77e4892"
+    ami = "ami-09c5e030f74651050"
     instance_type = "t2.micro"
     subnet_id = aws_subnet.public_subnet.id
     security_groups = ["${aws_security_group.ec2_sg.id}"]
